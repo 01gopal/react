@@ -1,13 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Menu from './component/Menu';
-import data from './data/recipes';
-import './index.css';
-
+// import AddColorForm from './component/AddColorForm'
+import StarRating from './component/star/StarRating';
 window.React = React
 
+const logColor = (title, color) => console.log(`New color : ${title} ${color}`)
+
 render(
-    <Menu recipes={data}
-        title="Delicious Recipes" />,
-    document.getElementById("root")
+    // <AddColorForm onNewColor={logColor}/>, document.getElementById("root")
+    <StarRating />, document.getElementById("root")
 )
