@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import AddColorForm from './component/colorForm/AddColorForm';
-import './index.css';
-
+import StarRating from './component/star/StarRating';
 window.React = React
 
+// const logColor = (title, color) => console.log(`New color : ${title} ${color}`)
+
 render(
-    <AddColorForm></AddColorForm>
-        ,
-    document.getElementById("root")
+    // <AddColorForm onNewColor={logColor}/>, document.getElementById("root")
+    <StarRating totalStars={10} starsSelected={4}/>, document.getElementById("root")
 )
