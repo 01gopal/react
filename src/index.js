@@ -1,13 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Menu from './component/Menu';
-import data from './data/recipes';
+import AddColorForm from './component/colorForm/AddColorForm';
 import './index.css';
 
 window.React = React
 
 render(
-    <Menu recipes={data}
-        title="Delicious Recipes" />,
+    <AddColorForm></AddColorForm>
+        ,
     document.getElementById("root")
 )
