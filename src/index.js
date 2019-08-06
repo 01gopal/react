@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './App'
+import MemberList from './component/member/MemberList'
 window.React = React
 
 // const logColor = (title, color) => console.log(`New color : ${title} ${color}`)
 
 render(
     // <AddColorForm onNewColor={logColor}/>
-    <App />
+    <MemberList count={-1}/>
     , document.getElementById("root")
 )
