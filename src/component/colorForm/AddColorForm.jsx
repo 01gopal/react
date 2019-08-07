@@ -5,6 +5,9 @@ const AddColorForm = ({onNewColor = f => f}) => {
   const submit = (e) => {
     e.preventDefault();
     onNewColor(_title.value, _color.value);
+    _title.value=''
+    _color.value='#000000'
+    _title.focus()
   }
 
   return (<form onSubmit={submit}>
