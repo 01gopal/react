@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import HiddenMessage from "./HiddenMessage";
+import ShowHideMessage from "./ShowHideMessage";
 
 class HiddenMessages extends Component {
   constructor(props) {
     super(props);
     this.state = {
       messages: [
-        "The crow crows after midnight", "Bring a watch and dark cloths to the spot", "Jericho Jericho Go"
+        "The crow crows after midnight",
+        "Bring a watch and dark cloths to the spot",
+        "Jericho Jericho Go"
       ],
       showing: -1
     };
@@ -30,7 +33,8 @@ class HiddenMessages extends Component {
     return (
       <div>
         {messages.map((message, i) => (
-          <HiddenMessage key={i} hide={i !== showing}>{message}</HiddenMessage>
+          //<HiddenMessage key={i} hide={i !== showing}>{message}</HiddenMessage>
+          <ShowHideMessage key={i} hide={i !== showing}>{message}</ShowHideMessage>
         ))}
       </div>
     );

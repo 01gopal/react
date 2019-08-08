@@ -1,5 +1,5 @@
 import React from 'react'
-import DataLoadComponent from '../higher-order-component/DataLoadComponent';
+import DataLoadComponent from '../hoc/DataLoadComponent';
 
 const PeopleList = ({ data }) => {
             console.log("data=" + data)
