@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import HiddenMessages from './component/message/HiddenMessages'
+import Counter from './component/count/ButtonCount'
 window.React = React
 
 // const logColor = (title, color) => console.log(`New color : ${title} ${color}`)
@@ -9,6 +9,6 @@ window.React = React
 render(
     // <AddColorForm onNewColor={logColor}/>
     // <MemberList count={-1}/>
-    <HiddenMessages />
+    <Counter />
     , document.getElementById("root")
 )
