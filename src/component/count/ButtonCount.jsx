@@ -9,7 +9,9 @@ class Counter extends Component {
         this.handleClick = this.handleClick.bind(this)
     }
 
-    handleClick() {
+    handleClick(e) {
+        console.log(e)
+        e.preventDefault()
         const {count} = this.state
         this.setState({
             count: count + 1
