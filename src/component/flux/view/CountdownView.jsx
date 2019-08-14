@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Countdown = ({ count, tick, reset}) => {
+const CountdownView = ({ count, tick, reset}) => {
     if (count) {
-        setInterval(tick, 1000);
+        setTimeout(() => tick(count), 1000);
     }
 
-    return count ?
+    return (count) ?
         <h1>{count}</h1>
         : <div onClick={() => reset(10)}>
             <span>CELEBRATE!!!</span>
@@ -13,4 +13,4 @@ const Countdown = ({ count, tick, reset}) => {
         </div>
 }
 
-export default Countdown
+export default CountdownView

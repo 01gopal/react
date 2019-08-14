@@ -1,27 +1,28 @@
 import { EventEmitter } from 'events'
 
 class CountDownStore extends EventEmitter {
-    constructor(count=10, dispatcher) {
+    constructor(count, dispatcher) {
         super()
         this._count = count
-        this.dispatcherIndex = dispatcher.register(this.dispatcher.bind(this))
+        this.dispatcherIndex = dispatcher.register(this.dispatch.bind(this))
     }
 
-    getCount() {
+    get count() {
         return this._count
     }
 
     dispatch(payload) {
-        const { type } = payload.action
+        const { type, count } = payload.action
+        console.log(`${type} action is called with count=${count}`)
         switch (type) {
             case "TICK":
                 this._count = this._count - 1
                 this.emit("TICK", this._count)
-                return true
+                return false
             case "RESET":
-                this._count = payload.action.count
+                this._count = count
                 this.emit("RESET", this._count)
-                return true
+                return false
             default:
                 return false
         }

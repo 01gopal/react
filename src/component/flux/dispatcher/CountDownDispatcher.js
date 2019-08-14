@@ -1,11 +1,12 @@
-import Dispatcher from 'flux'
+import Flux from 'flux'
 
-export default class CountdownDispatcher extends Dispatcher {
+class CountdownDispatcher extends Flux.Dispatcher {
     handleAction(action) {
-        console.log('dispatching action:', action)
         this.dispatch({
             source: 'VIEW_ACTION',
             action
         })
     }
 }
+
+export default CountdownDispatcher
