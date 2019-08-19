@@ -6,13 +6,14 @@ class Color extends React.Component {
   componentWillMount() {
     this.style = { backgroundColor: "#CCC" };
   }
+  
   shouldComponentUpdate(nextProps) {
     const { rating } = this.props;
     return rating !== nextProps.rating;
   }
 
   componentWillUpdate() {
-    this.style = null;
+    this.style = null
   }
 
   render() {

@@ -4,5 +4,3 @@ export const constants = {
     REMOVE_COLOR: "REMOVE_COLOR",
     RATE_COLOR: "RATE_COLOR",
 }
-
-export default constants
